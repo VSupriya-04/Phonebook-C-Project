@@ -33,13 +33,13 @@ pipeline {
             mail to: 'Veeramally.Supriya@ltts.com',
                  subject: 'Build Success',
                  body: 'Build logs attached',
-                 attachments: 'build.log'
+                 attachLog: true
         }
         failure {
             mail to: 'Veeramally.Supriya@ltts.com',
                  subject: 'Build Failure',
                  body: 'Build logs attached',
-                 attachments: 'build.log'
+                 attachLog: true
         }
     }
 }
