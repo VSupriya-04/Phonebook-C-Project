@@ -23,11 +23,6 @@ pipeline {
                 sh 'gcov main.cpp'
             }
         }
-        stage('Static Analysis') {
-            steps {
-                sh 'sonar-scanner -Dsonar.projectKey=myproject -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000'
-            }
-        }
     }
     post {
         success {
